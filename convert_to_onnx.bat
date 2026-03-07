@@ -7,7 +7,7 @@ if /I "%~1"=="--interactive" (
     goto :main
 )
 if "%~1"=="" (
-    start "" cmd /k "cd /d ""%~dp0"" && set AUTOMATED_MODE=1 && call ""%~f0"" --interactive"
+    start cmd /k "cd /d ""%~dp0"" && set AUTOMATED_MODE=1 && ""%~f0"" --interactive"
     exit /b
 )
 :main
